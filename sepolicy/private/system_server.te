@@ -30,3 +30,6 @@ add_service(system_server, app_lock_service);
 
 # Game space
 add_service(system_server, game_space_service);
+
+# Refresh Rate Manager
+add_service(system_server, refresh_rate_manager_service);
