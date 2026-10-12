@@ -19,6 +19,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/marble/aospa_marble.mk \
     $(LOCAL_DIR)/mi439_419/aospa_mi439_419.mk \
     $(LOCAL_DIR)/miatoll/aospa_miatoll.mk \
+    $(LOCAL_DIR)/mondrian/aospa_mondrian.mk \
     $(LOCAL_DIR)/munch/aospa_munch.mk \
     $(LOCAL_DIR)/nuwa/aospa_nuwa.mk \
     $(LOCAL_DIR)/oneplus7/aospa_oneplus7.mk \
@@ -53,6 +54,7 @@ COMMON_LUNCH_CHOICES += \
     aospa_marble-userdebug \
     aospa_mi439_419-userdebug \
     aospa_miatoll-userdebug \
+    aospa_mondrian-userdebug \
     aospa_munch-userdebug \
     aospa_nuwa-userdebug \
     aospa_oneplus7-userdebug \
