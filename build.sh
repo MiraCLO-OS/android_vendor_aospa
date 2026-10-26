@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+export BUILD_USERNAME=MiraCLO
+export BUILD_HOSTNAME=MiraCLO
 # AOSPA build helper script
 
 # red = errors, cyan = warnings, green = confirmations, blue = informational
