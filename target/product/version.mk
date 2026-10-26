@@ -63,3 +63,8 @@ AOSPA_VERSION += $(AOSPA_BUILD)-$(BUILD_DATE)
 
 # Remove unwanted characters for zip naming
 AOSPA_VERSION := $(shell echo -n $(AOSPA_VERSION) | tr -d '[:space:]')
+
+# MiraCLO
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.build.display.id=MiraCLO-$(AOSPA_VERSION) \
+    ro.aospa.miraclo.version=$(AOSPA_MAJOR_VERSION)-$(AOSPA_BUILD_VARIANT)
