@@ -262,15 +262,15 @@ elif [ "${KEY_MAPPINGS}" ]; then
     echo -e "${CLR_BLD_BLU}Signing target files apks${CLR_RST}"
     sign_target_files_apks -o -d $KEY_MAPPINGS \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files.zip \
-        aospa-$AOSPA_VERSION-signed-target_files.zip
+        MiraCLO-$AOSPA_VERSION-signed-target_files.zip
 
     checkExit
 
     echo -e "${CLR_BLD_BLU}Generating signed install package${CLR_RST}"
     ota_from_target_files -k $KEY_MAPPINGS/releasekey \
         --block ${INCREMENTAL} \
-        aospa-$AOSPA_VERSION-signed-target_files.zip \
-        aospa-$AOSPA_VERSION.zip
+        MiraCLO-$AOSPA_VERSION-signed-target_files.zip \
+        MiraCLO-$AOSPA_VERSION.zip
 
     checkExit
 
@@ -282,16 +282,16 @@ elif [ "${KEY_MAPPINGS}" ]; then
         fi
         ota_from_target_files -k $KEY_MAPPINGS/releasekey \
             --block --incremental_from $DELTA_TARGET_FILES \
-            aospa-$AOSPA_VERSION-signed-target_files.zip \
-            aospa-$AOSPA_VERSION-delta.zip
+            MiraCLO-$AOSPA_VERSION-signed-target_files.zip \
+            MiraCLO-$AOSPA_VERSION-delta.zip
         checkExit
     fi
 
     if [ "$FLAG_IMG_ZIP" = 'y' ]; then
         echo -e "${CLR_BLD_BLU}Generating signed fastboot package${CLR_RST}"
         img_from_target_files \
-            aospa-$AOSPA_VERSION-signed-target_files.zip \
-            aospa-$AOSPA_VERSION-image.zip
+            MiraCLO-$AOSPA_VERSION-signed-target_files.zip \
+            MiraCLO-$AOSPA_VERSION-image.zip
         checkExit
     fi
 # Build rom package
@@ -303,14 +303,14 @@ elif [ "$FLAG_IMG_ZIP" = 'y' ]; then
     echo -e "${CLR_BLD_BLU}Generating install package${CLR_RST}"
     ota_from_target_files \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files.zip \
-        aospa-$AOSPA_VERSION.zip
+        MiraCLO-$AOSPA_VERSION.zip
 
     checkExit
 
     echo -e "${CLR_BLD_BLU}Generating fastboot package${CLR_RST}"
     img_from_target_files \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files.zip \
-        aospa-$AOSPA_VERSION-image.zip
+        MiraCLO-$AOSPA_VERSION-image.zip
 
     checkExit
 
@@ -319,8 +319,8 @@ else
 
     checkExit
 
-    cp -f $OUT/aospa_$DEVICE-ota.zip $OUT/aospa-$AOSPA_VERSION.zip
-    echo "Package Complete: $OUT/aospa-$AOSPA_VERSION.zip"
+    cp -f $OUT/aospa_$DEVICE-ota.zip $OUT/MiraCLO-$AOSPA_VERSION.zip
+    echo "Package Complete: $OUT/MiraCLO-$AOSPA_VERSION.zip"
 fi
 echo -e ""
 
