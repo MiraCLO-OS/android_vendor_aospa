@@ -45,7 +45,7 @@ endif
 
 # MiraCLO release name: the number and codename of this beta / stable release.
 # Beta 1 is "Aurora". Bump both for every public release.
-MIRACLO_RELEASE_NUMBER := 1
+MIRACLO_RELEASE_NUMBER := 2
 MIRACLO_CODENAME := Aurora
 
 # Build Date
